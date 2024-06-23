@@ -1,5 +1,5 @@
 /*
- *    Copyright 2006-2022 the original author or authors.
+ *    Copyright 2006-2023 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -51,7 +52,8 @@ import org.xml.sax.SAXException;
  * @author Jeff Butler
  */
 public class XmlFileMergerJaxp {
-    private XmlFileMergerJaxp() {}
+    private XmlFileMergerJaxp() {
+    }
 
     private static class NullEntityResolver implements EntityResolver {
         /**

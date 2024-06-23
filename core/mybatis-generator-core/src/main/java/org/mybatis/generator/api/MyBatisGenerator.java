@@ -1,5 +1,5 @@
 /*
- *    Copyright 2006-2022 the original author or authors.
+ *    Copyright 2006-2023 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -42,7 +42,6 @@ import org.mybatis.generator.internal.XmlFileMergerJaxp;
 
 /**
  * This class is the main interface to MyBatis generator. A typical execution of the tool involves these steps:
- *
  * <ol>
  * <li>Create a Configuration object. The Configuration can be the result of a parsing the XML configuration file, or it
  * can be created solely in Java.</li>
@@ -51,11 +50,13 @@ import org.mybatis.generator.internal.XmlFileMergerJaxp;
  * </ol>
  *
  * @author Jeff Butler
+ *
  * @see org.mybatis.generator.config.xml.ConfigurationParser
  */
 public class MyBatisGenerator {
 
-    private static final ProgressCallback NULL_PROGRESS_CALLBACK = new ProgressCallback() {};
+    private static final ProgressCallback NULL_PROGRESS_CALLBACK = new ProgressCallback() {
+    };
 
     private final Configuration configuration;
 

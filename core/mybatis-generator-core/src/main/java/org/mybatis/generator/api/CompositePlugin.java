@@ -39,7 +39,6 @@ import org.mybatis.generator.config.Context;
  * subsequent plugin is called.
  *
  * @author Jeff Butler
- *
  */
 public abstract class CompositePlugin implements Plugin {
     private final List<Plugin> plugins = new ArrayList<>();
@@ -1269,6 +1268,18 @@ public abstract class CompositePlugin implements Plugin {
     public boolean shouldGenerate(IntrospectedTable introspectedTable) {
         for (Plugin plugin : plugins) {
             if (!plugin.shouldGenerate(introspectedTable)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean clientUpdateByPrimaryKeyMethodGenerated(Method method, Interface interfaze,
+            IntrospectedTable introspectedTable) {
+        for (Plugin plugin : plugins) {
+            if (!plugin.clientUpdateByPrimaryKeyMethodGenerated(method, interfaze, introspectedTable)) {
                 return false;
             }
         }

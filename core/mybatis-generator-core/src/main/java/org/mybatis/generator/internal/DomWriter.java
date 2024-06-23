@@ -1,5 +1,5 @@
 /*
- *    Copyright 2006-2022 the original author or authors.
+ *    Copyright 2006-2023 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -325,7 +325,7 @@ public class DomWriter {
     protected void write(CDATASection node) {
         printWriter.print("<![CDATA["); //$NON-NLS-1$
         String data = node.getNodeValue();
-        // XML parsers normalize line endings to '\n'.  We should write
+        // XML parsers normalize line endings to '\n'. We should write
         // it out as it was in the original to avoid whitespace commits
         // on some version control systems
         int len = (data != null) ? data.length() : 0;

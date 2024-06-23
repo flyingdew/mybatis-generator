@@ -1,5 +1,5 @@
 /*
- *    Copyright 2006-2022 the original author or authors.
+ *    Copyright 2006-2023 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -22,17 +22,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import mbg.test.mb3.generated.annotated.miscellaneous.mapper.EnumordinaltestMapper;
-import mbg.test.mb3.generated.annotated.miscellaneous.model.Enumordinaltest;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 
 import mbg.test.common.FirstName;
 import mbg.test.common.MyTime;
 import mbg.test.mb3.common.TestEnum;
+import mbg.test.mb3.generated.annotated.miscellaneous.mapper.EnumordinaltestMapper;
 import mbg.test.mb3.generated.annotated.miscellaneous.mapper.EnumtestMapper;
 import mbg.test.mb3.generated.annotated.miscellaneous.mapper.MyObjectMapper;
 import mbg.test.mb3.generated.annotated.miscellaneous.mapper.RegexrenameMapper;
+import mbg.test.mb3.generated.annotated.miscellaneous.model.Enumordinaltest;
 import mbg.test.mb3.generated.annotated.miscellaneous.model.Enumtest;
 import mbg.test.mb3.generated.annotated.miscellaneous.model.MyObject;
 import mbg.test.mb3.generated.annotated.miscellaneous.model.MyObjectCriteria;
@@ -41,7 +41,6 @@ import mbg.test.mb3.generated.annotated.miscellaneous.model.Regexrename;
 
 /**
  * @author Jeff Butler
- *
  */
 public class MiscellaneousTest extends AbstractAnnotatedMiscellaneousTest {
 
